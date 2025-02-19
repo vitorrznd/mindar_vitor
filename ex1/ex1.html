@@ -1,0 +1,16 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+        <a-assets>
+            <img id="ney" src="ex1/Neymar_(cropped).jpg">
+        </a-assets>
+        <a-sky color="#005"></a-sky>
+        <a-sphere position="0 2 -5" radius="1" src="#ney"
+           animation="property: rotation; dur: 10000;
+           to: 0 360 0; loop: true"></a-sphere>  
+    </a-scene>
+  </body>
+</html>
