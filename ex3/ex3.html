@@ -6,7 +6,14 @@
     <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
   </head>
   <body>
-    <a-scene mindar-image="imageTargetSrc: ex3/targets.mind, ex3/targets (1).mind, ex3/targets (2).mind, ex3/targets (3).mind, ex3/targets (4).mind;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+    <a-scene
+      mindar-image="imageTargetSrc: /media/vitor/vitor/mindar_vitor/ex3/targets"
+      color-space="sRGB"
+      renderer="colorManagement: true, physicallyCorrectLights"
+      vr-mode-ui="enabled: false"
+      device-orientation-permission-ui="enabled: false"
+      mindar-image-system
+    >
       <a-assets>
         <img id="wally" src="wally_0.png" />
         <img id="chicas" src="chicas.png" />
@@ -18,20 +25,24 @@
       <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
 
       <a-entity mindar-image-target="targetIndex: 0">
-        <a-plane src="#wally" position="0 0 0" height="1" width="1" rotation="0 0 0"></a-plane>              
-    </a-entity>
+        <a-plane src="#wally" position="0 0 0" height="1" width="1"></a-plane>
+      </a-entity>
+
       <a-entity mindar-image-target="targetIndex: 1">
-        <a-plane src="#chicas" position="0 0 0" height="1" width="1" rotation="0 0 0"></a-plane>              
-    </a-entity>
+        <a-plane src="#chicas" position="0 0 0" height="1" width="1"></a-plane>
+      </a-entity>
+
       <a-entity mindar-image-target="targetIndex: 2">
-        <a-plane src="#griff" position="0 0 0" height="1" width="1" rotation="0 0 0"></a-plane>              
-    </a-entity>
+        <a-plane src="#griff" position="0 0 0" height="1" width="1"></a-plane>
+      </a-entity>
+
       <a-entity mindar-image-target="targetIndex: 3">
-        <a-plane src="#tigres" position="0 0 0" height="1" width="1" rotation="0 0 0"></a-plane>              
-    </a-entity>
+        <a-plane src="#tigres" position="0 0 0" height="1" width="1"></a-plane>
+      </a-entity>
+
       <a-entity mindar-image-target="targetIndex: 4">
-        <a-plane src="#verd" position="0 0 0" height="1" width="1" rotation="0 0 0"></a-plane>              
-    </a-entity>
+        <a-plane src="#verd" position="0 0 0" height="1" width="1"></a-plane>
+      </a-entity>
     </a-scene>
   </body>
 </html>
