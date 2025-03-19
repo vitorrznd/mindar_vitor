@@ -55,6 +55,24 @@
             
             animando = !animando;
         });
+
+        document.querySelectorAll("a-sphere, a-cone, a-cylinder, a-torus, a-ring, a-box, a-tetrahedron, a-octahedron").forEach(elemento => {
+            elemento.addEventListener("mouseenter", () => {
+                elemento.setAttribute("animation__scale", {
+                    property: "scale",
+                    to: "1.5 1.5 1.5",
+                    dur: 300
+                });
+            });
+            
+            elemento.addEventListener("mouseleave", () => {
+                elemento.setAttribute("animation__scale", {
+                    property: "scale",
+                    to: "1 1 1",
+                    dur: 300
+                });
+            });
+        });
     </script>
 </body>
 </html>
