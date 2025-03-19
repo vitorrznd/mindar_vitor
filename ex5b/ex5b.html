@@ -26,6 +26,8 @@
     </a-scene>
 
     <script>
+        let animando = false;
+        
         document.body.addEventListener("click", () => {
             const animaciones = [
                 { id: "esfera", property: "rotation", to: "0 360 0", dur: 5000 },
@@ -35,17 +37,23 @@
                 { id: "anillo", property: "position", to: "7 3 -20", dur: 4000, dir: "alternate" },
                 { id: "cubo", property: "rotation", to: "0 360 0", dur: 4000 }
             ];
-
-            animaciones.forEach(({ id, property, to, dur, dir = "normal" }) => {
-                document.querySelector(`#${id}`).setAttribute("animation", {
-                    property,
-                    to,
-                    dur,
-                    loop: true,
-                    dir,
-                    easing: "linear"
-                });
+            
+            animaciones.forEach(({ id }) => {
+                const elemento = document.querySelector(`#${id}`);
+                if (animando) {
+                    elemento.removeAttribute("animation");
+                } else {
+                    elemento.setAttribute("animation", {
+                        property: "rotation",
+                        to: "0 360 0",
+                        dur: 5000,
+                        loop: true,
+                        easing: "linear"
+                    });
+                }
             });
+            
+            animando = !animando;
         });
     </script>
 </body>
