@@ -1,0 +1,288 @@
+{
+  "accessors": [
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 65532,
+      "max": [
+        1.7166136503219604,
+        1.3259280920028687,
+        2.691230058670044
+      ],
+      "min": [
+        -1.7169266939163208,
+        -1.9480400085449219,
+        -2.704010486602783
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 786384,
+      "componentType": 5126,
+      "count": 65532,
+      "max": [
+        0.9999905824661255,
+        0.9999881982803345,
+        0.9999951124191284
+      ],
+      "min": [
+        -0.9999944567680359,
+        -0.9999843239784241,
+        -0.9999690651893616
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 65532,
+      "max": [
+        0.7450980544090271,
+        0.5490196347236633,
+        0.45490196347236633,
+        1.0
+      ],
+      "min": [
+        0.0117647061124444,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 346617,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 1572768,
+      "componentType": 5126,
+      "count": 30135,
+      "max": [
+        1.6859707832336426,
+        1.3264589309692383,
+        2.6907453536987305
+      ],
+      "min": [
+        -1.7105315923690796,
+        -1.9481751918792725,
+        -2.709784507751465
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 1934388,
+      "componentType": 5126,
+      "count": 30135,
+      "max": [
+        0.9999726414680481,
+        0.9998961687088013,
+        0.999899685382843
+      ],
+      "min": [
+        -0.9999944567680359,
+        -0.9999986290931702,
+        -0.9999704360961914
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 1048512,
+      "componentType": 5126,
+      "count": 30135,
+      "max": [
+        0.6431372761726379,
+        0.545098066329956,
+        0.45098039507865906,
+        1.0
+      ],
+      "min": [
+        0.07058823853731155,
+        0.0470588244497776,
+        0.03921568766236305,
+        1.0
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 1386468,
+      "componentType": 5125,
+      "count": 102543,
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "DarkTheWarrior (https://sketchfab.com/DarkTheWarrior)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/terror-dog-5fa528073e0e434e8a936ea3e7769c45",
+      "title": "Terror Dog"
+    },
+    "generator": "Sketchfab-15.46.0",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 1796640,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 2296008,
+      "byteOffset": 1796640,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 1530672,
+      "byteOffset": 4092648,
+      "byteStride": 16,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 5623320,
+      "uri": "scene.bin"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "name": "terror_dog_25",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.5,
+          0.5,
+          0.5,
+          1.0
+        ],
+        "metallicFactor": 0.0
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "terror dog 25_terror dog 25_0",
+      "primitives": [
+        {
+          "attributes": {
+            "COLOR_0": 2,
+            "NORMAL": 1,
+            "POSITION": 0
+          },
+          "indices": 3,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "terror dog 25_terror dog 25_0",
+      "primitives": [
+        {
+          "attributes": {
+            "COLOR_0": 6,
+            "NORMAL": 5,
+            "POSITION": 4
+          },
+          "indices": 7,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.220446049250313e-16,
+        -1.0,
+        0.0,
+        0.0,
+        1.0,
+        2.220446049250313e-16,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "Sketchfab_model"
+    },
+    {
+      "children": [
+        2
+      ],
+      "matrix": [
+        0.009999999776482582,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.009999999776482582,
+        0.0,
+        0.0,
+        -0.009999999776482582,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "07cff5a2a5b945ec990bded7d07b9c5d.fbx"
+    },
+    {
+      "children": [
+        3
+      ],
+      "name": "RootNode"
+    },
+    {
+      "children": [
+        4,
+        5
+      ],
+      "name": "terror dog 25"
+    },
+    {
+      "mesh": 0,
+      "name": "terror dog 25_terror dog 25_0"
+    },
+    {
+      "mesh": 1,
+      "name": "terror dog 25_terror dog 25_0"
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Sketchfab_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ]
+}
