@@ -1,0 +1,49 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script>
+        AFRAME.registerComponent("mylink", {
+        init: function() {  
+         this.el.addEventListener("click", (e) => {              
+            window.location = this.data.href;      
+           })
+        }
+      })
+    </script>
+  </head>
+  <body>
+  <a-scene cursor="rayOrigin: mouse">
+    <a-assets>
+      <img id="imgSortida" src="assets/entragroc.png" >
+      <img id="imgFantasma" src="assets/fantasma.png" >
+      <img id="imgCasa" src="playa.jpg">
+      <a-asset-item id="dracula" src="megalodon/scene.gltf"></a-asset-item>
+    </a-assets>
+   
+    <a-entity camera look-controls wasd-controls="false">
+     <a-entity cursor="fuse: true; fuseTimeout: 2000"
+           position="0 0 -1"
+           geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
+           material="color: blue; shader: flat"
+           animation="property: components.material.material.color;
+                 type: color;
+                 to: white;
+                 dur: 1000;
+                 dir: alternate;
+                 loop: true">
+     </a-entity>
+    </a-entity>
+
+      <a-sky src="#imgCasa"></a-sky>
+      <a-sphere position="5 2 -5" radius="1"  src="#imgFantasma"
+                animation="property: rotation; dur: 10000;
+                       to: 0 360 0; loop: true">          
+       </a-sphere>
+      <a-entity gltf-model="#dracula" position="-40 -10 5" scale="0.02 0.02 0.02" rotation="0 90 0" animation="property: position; dur: 6000; from: -50 -3.5 9.5; to: -4 -2 0; dir: alternate; loop: true">        
+      </a-entity>
+      <a-plane position="10 0 -2" animation="property: scale; to: 0 0 1; dur: 2500; dir: alternate; loop: true;" src="#imgSortida" rotation="0 260 0"  transparent="true" mylink="href: https://vitorrznd.github.io/mindar_vitor/"></a-plane>
+      <a-plane position="10 0 2" animation="property: scale; to: 0 0 1; dur: 2500; dir: alternate; loop: true;" src="#imgSortida" rotation="0 260 0"  transparent="true" mylink="href: https://vitorrznd.github.io/mindar_vitor/ex6/ex6.html"></a-plane>
+      <a-plane position="10 0 6" animation="property: scale; to: 0 0 1; dur: 2500; dir: alternate; loop: true;" src="#imgSortida" rotation="0 260 0"  transparent="true" mylink="href: https://vitorrznd.github.io/mindar_vitor/ex5b/ex5b.html"></a-plane>
+    </a-scene>
+  </body>
+</html>
