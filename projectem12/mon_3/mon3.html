@@ -1,0 +1,51 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script>
+      AFRAME.registerComponent("mylink", {
+        schema: {
+          href: { type: "string" }
+        },
+        init: function () {
+          this.el.addEventListener("click", (e) => {
+            window.location = this.data.href;
+          });
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <a-scene cursor="rayOrigin: mouse">
+      <a-assets>
+        <img id="imgSortida" src="piramede.png">
+        <img id="imgCasa" src="mon3.png">
+        <img id="imgCub" src="caja1.png"> <!-- Imagen para el cubo -->
+      </a-assets>
+
+      <a-entity camera look-controls wasd-controls="false">
+        <a-entity cursor="fuse: true; fuseTimeout: 2000"
+                  position="0 0 -1"
+                  geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
+                  material="color: red; shader: flat"
+                  animation="property: components.material.material.color;
+                             type: color;
+                             dur: 1000;
+                             dir: alternate;
+                             loop: true">
+        </a-entity>
+      </a-entity>
+
+      <a-sky src="#imgCasa"></a-sky>
+
+      <!-- Cubo con imagen como textura -->
+      <a-box position="-10 -6 8" rotation="0 30 0" scale="2 2 2" width="1" height="1" depth="1"
+             material="src: #imgCub; repeat: 1 1">
+      </a-box>
+
+      <!-- Imagen enlazada a una página externa -->
+      <a-plane position="10 -1 8" scale="2 2 2" src="#imgSortida" rotation="0 260 0"
+               transparent="true" mylink="href: https://vitorrznd.github.io/mindar_vitor/">
+      </a-plane>
+    </a-scene>
+  </body>
+</html>
