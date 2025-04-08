@@ -1,0 +1,50 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://castelletm12b.cat/build/assets/question.js" defer></script>
+    <script>
+      AFRAME.registerComponent("mylink", {
+        schema: {
+          href: { type: "string" }
+        },
+        init: function () {
+          this.el.addEventListener("click", (e) => {
+            window.location = this.data.href;
+          });
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <a-scene cursor="rayOrigin: mouse">
+      <a-assets>
+        <img id="imgSortida" src="llave.png">
+        <img id="imgCasa" src="mon5.jpg">
+        <img id="imgCub" src="carta.jpg">
+      </a-assets>
+
+      <a-entity camera look-controls wasd-controls="false">
+        <a-entity cursor="fuse: true;"
+                  position="0 0 -1"
+                  geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
+                  material="color: red; shader: flat"
+                  animation="property: components.material.material.color;
+                             type: color;
+                             dur: 1000;
+                             dir: alternate;
+                             loop: true">
+        </a-entity>
+      </a-entity>
+
+      <a-sky src="#imgCasa"></a-sky>
+
+      <a-plane position="-0 -4 -20" scale="3 3 3" src="#imgCub" rotation="0 10 0"
+               transparent="true">
+      </a-plane>
+
+      <a-plane position="-35 0 40" scale="4 4 4" src="#imgSortida" rotation="0 210 0"
+               transparent="true" mylink="href: https://vitorrznd.github.io/mindar_vitor/">
+      </a-plane>
+    </a-scene>
+  </body>
+</html>
