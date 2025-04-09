@@ -2,6 +2,7 @@
   <head>
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
     <script src="https://castelletm12b.cat/build/assets/question.js" defer></script>
+    <title>MON 1</title>
     <script>
         AFRAME.registerComponent("mylink", {
         init: function() {  
@@ -41,7 +42,7 @@
    
       <a-sky src="#mon"></a-sky>
       <a-entity gltf-model="#monstre" position="29 -2.5 29" rotation="0 220 0" scale="1 1 1" animation="property: position; dur: 10000; from: 29 -2.5 29; to: 0 0 0; dir: alternate; loop: true"></a-entity>
-      <a-box position="6 2.5 -5" src="#caixa" rotation="0 190 0" animation="property: rotation; to: 0 360 0; dur: 4000; loop: true" transparent="true"  mylink="href: https://vitorrznd.github.io/mindar_vitor/"></a-box>
+      <a-box question="45" position="6 2.5 -5" src="#caixa" rotation="0 190 0" animation="property: rotation; to: 0 360 0; dur: 4000; loop: true" transparent="true"></a-box>
 
     </a-scene>
   </body>
