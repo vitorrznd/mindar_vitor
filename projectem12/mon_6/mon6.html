@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://castelletm12b.cat/build/assets/question.js" defer></script>
+    <title>MON 6</title>
+    <script>
+        AFRAME.registerComponent("mylink", {
+        init: function() {  
+         this.el.addEventListener("click", (e) => {              
+            window.location = this.data.href;      
+           })
+        }
+      })
+    </script>
+  </head>
+  <body>
+  <a-scene cursor="rayOrigin: mouse">
+    <a-assets>
+      <img id="imgBosc" src="bosc.jpg">
+      <img id="Piña" src="assets/piña.png">
+      <a-asset-item id="ardilla" src="assets/squirrel_and_acorn_figure_-_metashape_app/scene.gltf"></a-asset-item>
+    </a-assets>
+   
+    <a-entity camera look-controls wasd-controls="false">
+    </a-entity>
+
+    <a-sky src="#imgBosc"></a-sky>
+
+    <a-box position="16 -4 2" scale="0.6 0.6 0.6" transparent="true" src="#Piña">
+    </a-box>
+
+    <a-entity gltf-model="#ardilla" position="2 -0.5 -5" rotation="0 25 0" scale="0.05 0.05 0.05"></a-entity>
+
+
+
+  </a-scene>
+  </body>
+</html>
