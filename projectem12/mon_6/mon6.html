@@ -17,8 +17,13 @@
   <a-scene cursor="rayOrigin: mouse">
     <a-assets>
       <img id="imgBosc" src="bosc.jpg">
-      <img id="Piña" src="assets/piña.png">
-      <a-asset-item id="ardilla" src="assets/squirrel_and_acorn_figure_-_metashape_app/scene.gltf"></a-asset-item>
+      <img id="hoja1" src="images.jpeg">
+      <img id="hoja2guanyadora" src="images.jpeg">
+      <img id="hoja3" src="images.jpeg">
+      <img id="hoja4" src="images.jpeg">
+      <img id="hoja5" src="images.jpeg">
+      <img id="transparente" src="transparente.jpg">
+      <a-asset-item id="slenderman" src="assets/slender_fortress_slenderman/scene.gltf"></a-asset-item>
     </a-assets>
    
     <a-entity camera look-controls wasd-controls="false">
@@ -26,10 +31,14 @@
 
     <a-sky src="#imgBosc"></a-sky>
 
-    <a-box position="16 -4 2" scale="0.6 0.6 0.6" transparent="true" src="#Piña">
-    </a-box>
+    <a-plane position="25 2 2" scale="1.5 1.5 1.5" rotation="0 260 0" transparent="true" src="#hoja1"></a-plane>
+    <a-plane position="11 5 -5" scale="0.5 0.5 0.5" rotation="0 260 0" transparent="true" src="#hoja2guanyadora" mylink="href: ../ultima_pagina/pagina_final.html"></a-plane>
+    <a-plane position="2 2 28" scale="1.5 1.5 1.5" rotation="0 160 0" transparent="true" src="#hoja3"></a-plane>
+    <a-plane position="-22 -2 8" scale="1.5 1.5 1.5" rotation="0 160 0" transparent="true" src="#hoja4"></a-plane>
+    <a-plane position="-19 3 -20" scale="1 1 1" rotation="0 0 0" transparent="true" src="#hoja5"></a-plane>
+    <a-plane question="82" position="-3 0 -20" scale="3 3 3" rotation="0 0 0" src="#transparente" transparent="true" opacity="0"></a-plane>
 
-    <a-entity gltf-model="#ardilla" position="2 -0.5 -5" rotation="0 25 0" scale="0.05 0.05 0.05"></a-entity>
+    <a-entity gltf-model="#slenderman" position="-3.5 -2 -25" rotation="0 80 0" scale="0.05 0.05 0.05"></a-entity>
 
 
 
