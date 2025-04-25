@@ -4,46 +4,45 @@
     <script src="https://castelletm12b.cat/build/assets/question.js" defer></script>
     <title>MON 1</title>
     <script>
-        AFRAME.registerComponent("mylink", {
-        init: function() {  
-         this.el.addEventListener("click", (e) => {              
-            window.location = this.data.href;      
-           })
+      AFRAME.registerComponent("mylink", {
+        init: function() {
+          this.el.addEventListener("click", (e) => {
+            window.location = this.data.href;
+          });
         }
-      })
+      });
     </script>
-
-
   </head>
   <body>
-  <a-scene cursor="rayOrigin: mouse">
-    <a-assets>
-      <img id="caixa" src="assets/box.jpg" >
-      <img id="mon" src="assets/mon1.jpg" >
-      <a-asset-item id="monstre" src="assets/monstre/scene.gltf"></a-asset-item>
-    </a-assets>
-   
-    <a-entity camera look-controls wasd-controls="false">
-     <a-entity cursor="fuse: true; fuseTimeout: 2000"
-           position="0 0 -1"
-           geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
-           material="color: red; shader: flat"
-           animation="property: components.material.material.color;
-                 type: color;
-                 to: white;
-                 dur: 1000;
-                 dir: alternate;
-                 loop: true">
-     </a-entity>
-    </a-entity>
+    <a-scene cursor="rayOrigin: mouse">
+      <a-assets>
+        <img id="caixa" src="assets/box.jpg">
+        <img id="mon" src="assets/mon1.jpg">
+        <a-asset-item id="monstre" src="assets/monstre/scene.gltf"></a-asset-item>
+        <audio id="audio1" src="../musica.mp3"></audio>
+      </a-assets>
 
+      <a-entity camera look-controls wasd-controls="false">
+        <a-entity cursor="fuse: true; fuseTimeout: 2000"
+                  position="0 0 -1"
+                  geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
+                  material="color: red; shader: flat"
+                  animation="property: components.material.material.color;
+                             type: color;
+                             to: white;
+                             dur: 1000;
+                             dir: alternate;
+                             loop: true">
+        </a-entity>
+      </a-entity>
 
-   
-   
       <a-sky src="#mon"></a-sky>
-      <a-entity gltf-model="#monstre" position="29 -2.5 29" rotation="0 220 0" scale="1 1 1" animation="property: position; dur: 10000; from: 29 -2.5 29; to: 0 0 0; dir: alternate; loop: true"></a-entity>
+      <a-entity gltf-model="#monstre" position="29 -2.5 29" rotation="0 220 0" scale="1 1 1"
+                animation="property: position; dur: 10000; from: 29 -2.5 29; to: 0 0 0; dir: alternate; loop: true">
+      </a-entity>
       <a-box question="45" position="6 2.5 -5" src="#caixa" rotation="0 190 0" transparent="true"></a-box>
 
+      <a-entity id="sound" sound="src: #audio1; autoplay: true; loop: true"></a-entity>
     </a-scene>
   </body>
 </html>
